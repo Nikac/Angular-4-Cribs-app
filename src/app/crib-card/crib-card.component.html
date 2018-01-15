@@ -1,0 +1,16 @@
+	<img class="img" src="assets/{{ crib.image }}.jpg" alt="Card image cap">
+    <div class="card-body" *ngIf="!crib.showDetails">
+    	<p class="card-text"><span class="badge badge-primary">{{ crib.type }}</span></p>
+	    <h5 class="card-title">{{ crib.address }}</h5>
+	    <p class="card-text">{{ crib.price | currency:'USD':true }}</p>
+	    <hr>
+	    <button class="btn btn-success" *ngIf="!crib.showDetails" (click)="crib.showDetails = !crib.showDetails">Show Details</button>
+	</div>
+	<div class="card-body" *ngIf="crib.showDetails">
+	    <p class="card-text"><span class="badge badge-primary">Bedrooms: {{ crib.bedrooms }}</span></p>
+	    <p class="card-text"><span class="badge badge-primary">Baths: {{ crib.baths }}</span></p>
+	    <p class="card-text"><span class="badge badge-primary">Square metres: {{ crib.area }}</span></p>
+	    <hr>
+	    <button class="btn btn-danger" *ngIf="crib.showDetails" (click)="crib.showDetails = !crib.showDetails">Show Details</button>
+	</div>
+	  
