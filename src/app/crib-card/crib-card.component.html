@@ -8,7 +8,7 @@
 	</div>
 	<div class="card-body" *ngIf="crib.showDetails">
 	    <p class="card-text"><span class="badge badge-primary">Bedrooms: {{ crib.bedrooms }}</span></p>
-	    <p class="card-text"><span class="badge badge-primary">Baths: {{ crib.baths }}</span></p>
+	    <p class="card-text"><span class="badge badge-primary">Baths: {{ crib.bathrooms }}</span></p>
 	    <p class="card-text"><span class="badge badge-primary">Square metres: {{ crib.area }}</span></p>
 	    <hr>
 	    <button class="btn btn-danger" *ngIf="crib.showDetails" (click)="crib.showDetails = !crib.showDetails">Show Details</button>
